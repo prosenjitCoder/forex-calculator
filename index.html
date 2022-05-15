@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RISK MANAGEMENT CALCULATOR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css" />
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <!--===============================================================================================-->
+</head>
+
+<body>
+  <div class="bg-contact3" style="background-image: url('images/bg-0.jpg')">
+    <div class="container-contact3">
+      <div class="wrap-contact3">
+        <form class="contact3-form validate-form" id="form">
+          <span class="sub-title">Risk Management Calculator</span>
+          <div class="button-wrapper">
+            <!-- <div>
+              <button class="btn btn-primary">
+                <a style="color: #fff;" href="https://crypto-calculator-eta.vercel.app/choose-coin/index.html">Choose
+                  coin<i class="fa fa-long-arrow-right" style="position: relative;top: 2px;right: -2px;"></i>
+                </a>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-primary">
+                <a style="color: #fff;" href="https://crypto-calculator-eta.vercel.app/account/index.html">Account<i
+                    class="fa fa-long-arrow-right" style="position: relative;top: 2px;right: -2px;"></i>
+                </a>
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-primary">
+                <a style="color: #fff;" href="https://crypto-calculator-eta.vercel.app/intraday/index.html">Go to
+                  intraday
+                  <i class="fa fa-long-arrow-right" style="position: relative;top: 2px;right: -2px;"></i>
+                </a>
+              </button>
+            </div> -->
+          </div>
+          <div class="wrap-contact3-form-radio">
+            <div class="row">
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="accountSize">Account Size ($)<span class="text-danger"> *</span></label>
+                <div class="wrap-input3 validate-input" data-validate="Your trading account size is required">
+                  <input class="input3" type="number" step=".001" name="accountSize"
+                    placeholder="Total $ in your account" autocomplete="off" id="accountSize" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="riskAmount">Risk Amount (%)</label>
+                <div class="wrap-input3">
+                  <input class="input3" type="number" step="0.001" name="riskAmount"
+                    placeholder="Risk amount default 2%" autocomplete="off" id="riskAmount" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="swingPrice">Swing Price ($)<span class="text-danger"> *</span></label>
+                <div class="wrap-input3 validate-input" data-validate="Swing low / high price is required">
+                  <input class="input3" type="number" step="0.000000001" name="swingPrice"
+                    placeholder="Swing low / high price" autocomplete="off" id="swingPrice" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="atrValue">ATR Value<span class="text-danger"> *</span></label>
+                <div class="wrap-input3 validate-input" data-validate="ATR value is required">
+                  <input class="input3" type="number" step="0.000000001" name="atrValue"
+                    placeholder="Market volatility value" autocomplete="off" id="atrValue" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="entryPrice">Entry Price ($)<span class="text-danger"> *</span></label>
+                <div class="wrap-input3 validate-input" data-validate="Entry price is required">
+                  <input class="input3" type="number" step="0.000000001" name="entryPrice"
+                    placeholder="Entry price of the trade" autocomplete="off" id="entryPrice" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="takeProfit">Take Profit Price ($)<span class="text-danger"> *</span></label>
+                <div class="wrap-input3 validate-input"
+                  data-validate="Take profit price for exiting the trade with profit is required">
+                  <input class="input3" type="number" step="0.001" name="takeProfit" placeholder="Take profit price"
+                    autocomplete="off" id="takeProfit" />
+                  <span class="focus-input3"></span>
+                </div>
+              </div>
+            </div>
+            <!-- button alignment -->
+            <div class="btn-alignment">
+              <div class="container-contact3-form-btn">
+                <button class="contact3-form-btn" id="submit_btn">Submit</button>
+              </div>
+              <div class="radio-wrapper">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rad_direction" id="long" value="long" checked>
+                  <label class="form-check-label" for="long">Long</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="rad_direction" id="short" value="short">
+                  <label class="form-check-label" for="short">Short</label>
+                </div>
+              </div>
+            </div>
+            <!-- button alignment -->
+
+        </form>
+
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dropDownSelect1"></div>
+
+  <!--===============================================================================================-->
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <script>
+    $(".selection-2").select2({
+      minimumResultsForSearch: 20,
+      dropdownParent: $("#dropDownSelect1"),
+    });
+  </script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-23581568-13");
+  </script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
